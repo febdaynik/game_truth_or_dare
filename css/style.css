@@ -2,44 +2,83 @@
 	margin: 0;
 	padding: 0;	
 }
-body{
-	/*font-size: 3vw;*/
-	/*font-size: calc(16px + (24-16) * (100vw - 400px)/(800-400));*/
-	font-family: sans-serif;
+body,html{
+	font-family: 'Montserrat', sans-serif;
+	height: calc(100vh - 1.5vh);
+}
+html{
+	transition: all .8s;
+}
+
+.wrapper{
+	transition: all .8s;
+	position: relative;
+	/*overflow: hidden;*/
+	user-select: none;
+	min-height: 100vh;
+	max-width: 100vw;
+}
+.body-container{
+	transition: all .8s;
 	position: absolute;
 	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	user-select: none;
+	padding: 70px 0;
+	animation: swapup_block 1s forwards alternate-reverse;
 }
-
-#logo{
-	width: 250px;
-	margin: 40px;
+@keyframes swapup_block{
+	100%{transform: translate(-50%, -100%);
+		opacity: 0;}
 }
-form[action="cgi-bin/form.py"]{
-	font-size: 15px;
-	text-align: center;
-	background: #ddd;
+.body-content img{
 	width: 300px;
-	margin: 0 auto;
-	padding: 20px 10px;
+}
+.block-value-com, .block-game{
+	background: #ddd;
+	padding: 20px;
+	width: 350px;
+	text-align: center;
+	margin: 20px 0;
 	border-radius: 5px;
+}
+.body-content{
+	text-align: center;
+	height: 50vh;
+}
 
-}
-form[action="cgi-bin/form.py"] h2{
-	padding-bottom: 5px;
-}
-form[action="cgi-bin/form.py"] input[name="TEXT_1"]{
-	width: 250px;
+.block-value-com input[type="text"], .block-game input[type="text"]{
 	display: block;
 	margin: 15px auto;
-	font-size: 50px;
+	font-size: 20px;
 	text-align: center;
 }
-form[action="cgi-bin/form.py"] input[name="btn-next"]{
-	width: 65px;
-	height: 40px;
-	display: block;
+.block-value-com input[type="submit"], .block-game input[type="submit"]{
+	display: inline-block;
 	margin: 0 auto;
-	font-size: 17px;
+	padding: 5px 15px;
+	font-weight: 600;
+	margin: 10px;
+}
+
+.block-name-com{
+	margin: 5px 0;
+	padding: 10px 0;
+}
+.anim-{
+	animation: anim_block 1s forwards alternate-reverse;
+}
+@keyframes anim_block{
+	0%{transform: translate(0%, 50%);
+		opacity: 0;}
+}
+.block-game{
+	display: none;
+}
+.ask_or_action{
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-style: italic;
+	color: #4c6;
 }
