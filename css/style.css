@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+body{
+	/*font-size: 3vw;*/
+	/*font-size: calc(16px + (24-16) * (100vw - 400px)/(800-400));*/
+	font-family: sans-serif;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#logo{
+	width: 250px;
+	margin: 40px;
+}
+form[action="cgi-bin/form.py"]{
+	font-size: 15px;
+	text-align: center;
+	background: #ddd;
+	width: 300px;
+	margin: 0 auto;
+	padding: 20px 10px;
+	border-radius: 5px;
+
+}
+form[action="cgi-bin/form.py"] h2{
+	padding-bottom: 5px;
+}
+form[action="cgi-bin/form.py"] input[name="TEXT_1"]{
+	width: 250px;
+	display: block;
+	margin: 15px auto;
+	font-size: 50px;
+	text-align: center;
+}
+form[action="cgi-bin/form.py"] input[name="btn-next"]{
+	width: 65px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	font-size: 17px;
+}
