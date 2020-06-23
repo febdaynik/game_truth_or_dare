@@ -82,3 +82,30 @@ html{
 	font-style: italic;
 	color: #4c6;
 }
+
+
+@media (max-width: 1199.98px) {
+	.body-content img{
+		width: 500px;
+	}
+	.block-value-com, .block-game, .block-ask_or_action{
+		font-size: 35px;
+		width: 500px;
+	}
+	.block-value-com input[type="submit"], .block-game input[type="submit"], .block-ask_or_action input[type="submit"], .block-value-com input[type="text"], .block-game input[type="text"]{
+		margin-top: 50px;
+		font-size: 40px;
+		font-weight: 500;
+	}
+	.ask_or_action{
+		font-size: 50px;
+	}
+}
+
+@media(min-width: 1600px){
+
+}
+
+@media(min-width: 2000px){
+
+}
