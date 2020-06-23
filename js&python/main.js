@@ -1,6 +1,6 @@
 function next_1() {
 	value_com = document.querySelectorAll('input')[0].value
-	if (value_com != "" && value_com != " "){
+	if (value_com != "" && value_com != " " && value_com != 1){
 		document.querySelector('.block-value-com').innerHTML = ''
 		for (var i = value_com; i >= 1; i--) {
 			document.querySelector('.block-value-com').insertAdjacentHTML('afterBegin',
