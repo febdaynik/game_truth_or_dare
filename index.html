@@ -19,16 +19,34 @@
 			        <input type="text" name="TEXT_1">
 	       			<input type="submit" value="Далее" name="btn-next" onclick="next_1()">
 		    	</div>
+		    	<div class="block-ask_or_action">
+		    		<h2></h2>
+					<input type="submit" name="btn-ask" value="Правда" onclick="random_ask()">
+					<input type="submit" name="btn-action" value="Действие" onclick="random_action()">
+		    	</div>
 				<div class="block-game">
-					<h1 class="ask_or_action">Правда</h1>
+					<h1 class="ask_or_action">Правда or Действие</h1>
 					<h2>Текст</h2><br>
-	       			<input type="submit" value="Далее" name="btn-next" onclick="next_3()">
+	       			<input type="submit" value="Далее" name="btn-next" id="done" onclick="next_3()"><br>
+	       			<input type="submit" value="Поменять" name="btn-rand" onclick="">
+	       			<input type="submit" value="В начало" name="btn-next" onclick="window.location.reload()">
 					<script type="text/javascript">
 						function random_ask() {
+							document.querySelector('.block-ask_or_action').style.display = 'none'
+							document.querySelector('.block-game').style.display = 'block'
 							r = getRandomIntInclusive(0, 150)
-							return ask.split('\n')[r]
+							document.querySelector('input[name="btn-rand"]').attributes[3].value = "random_ask()"
+							document.querySelector('.block-game h2').innerText = ask.split('\n')[r]
+							document.querySelector('.ask_or_action').innerText = 'Правда'
 						}
-						document.querySelector('.block-game h2').innerText = random_ask()
+						function random_action() {
+							document.querySelector('.block-ask_or_action').style.display = 'none'
+							document.querySelector('.block-game').style.display = 'block'
+							r = getRandomIntInclusive(0, 50)
+							document.querySelector('input[name="btn-rand"]').attributes[3].value = "random_action()"
+							document.querySelector('.block-game h2').innerText = action.split('\n')[r]
+							document.querySelector('.ask_or_action').innerText = 'Действие'
+						}
 					</script>
 		    	</div>
 			</div>

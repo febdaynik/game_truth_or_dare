@@ -35,7 +35,7 @@ html{
 .body-content img{
 	width: 300px;
 }
-.block-value-com, .block-game{
+.block-value-com, .block-game, .block-ask_or_action{
 	background: #ddd;
 	padding: 20px;
 	width: 350px;
@@ -54,7 +54,7 @@ html{
 	font-size: 20px;
 	text-align: center;
 }
-.block-value-com input[type="submit"], .block-game input[type="submit"]{
+.block-value-com input[type="submit"], .block-game input[type="submit"], .block-ask_or_action input[type="submit"]{
 	display: inline-block;
 	margin: 0 auto;
 	padding: 5px 15px;
@@ -73,7 +73,7 @@ html{
 	0%{transform: translate(0%, 50%);
 		opacity: 0;}
 }
-.block-game{
+.block-game, .block-ask_or_action{
 	display: none;
 }
 .ask_or_action{
